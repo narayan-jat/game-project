@@ -1,0 +1,178 @@
+/* ****************** Body, head etc ****************** */
+body {
+	margin: 0;
+	padding: 0;
+	background-color: rgb(215, 214, 214);
+}
+
+/*Header alignment*/
+header {
+    width: 100%;
+    height: 50px;
+    background-color: #1b1b32;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+	margin-bottom: 500px;
+}
+
+#logo {
+    width: max(100px, 18vw);
+    background-color: #0a0a23;
+    aspect-ratio: 35 / 4;
+    padding: 0.4rem;
+  }
+
+  header h1 {
+    color: #f1be32;
+    font-size: min(5vw, 1.2em);
+    text-align: center;
+  }
+  
+  nav {
+    width: 50%;
+    max-width: 300px;
+    height: 50px;
+  }
+
+  nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+  }
+
+nav li a:hover {
+    text-decoration: underline;
+}
+/* Main body styling. */
+.main {
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 100px;
+}
+.visibility {
+	display: none;
+	position: relative;
+}
+.main h1, p{
+	text-align: center;
+}
+#message{
+	background-color: #70e6d4;
+	color: black;
+	font-size: 2em;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#prompt {
+	position: absolute;
+	top: 250px;
+	left: 230px;
+	width: 400px;
+	height: 100px;
+	padding: 30px;
+	text-align: center;
+	background-color: #9bf8f8;
+	font-size: 2em;
+	display: none;
+	color: black;
+	border-radius: 20px;
+}
+#promt a{
+	color: #FFF;
+	text-decoration: none;
+}
+/* Board styling */
+li{
+	list-style: none;
+	padding-bottom: 10px;
+	font-size: 1.2em;
+}
+
+li a {
+	color: white;
+	text-decoration: none;
+}
+
+/* ****************** Table style ****************** */
+#tab-tic-tac-toe {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	font-size: 4em;
+	font-family: Sans;
+	color: #444;
+	background: #F8F8F8;
+	width: 310px;
+	height: 300px;
+	text-align: center;
+	vertical-align: center;
+	border: 1px solid #CECECE;
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px #CCC;
+}
+
+/*Column style*/
+#tab-tic-tac-toe td {
+	border-collapse:collapse;
+	border-left: 5px solid #CCC;
+	border-bottom: 5px solid #CCC;
+}
+
+#tab-tic-tac-toe td:first-child {
+	border-left: none;
+}
+
+#tab-tic-tac-toe tr:last-child td {
+	border-bottom: none;
+}
+
+/*Cells*/
+#tab-tic-tac-toe td {
+	cursor: pointer;
+	height: 95px;
+	width: 95px;
+}
+
+#tab-tic-tac-toe td:hover {
+	background: #ECECEC;
+}
+
+/* ****************** Restart Button ****************** */
+#bnt-restart, #bnt-search{
+	display: block;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+	background: #00AEEA;
+	font-size: 1.5em;
+	color: #FFF;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+#bnt-restart:hover, #bnt-search:hover{
+	background: #1DC5FF;
+}
+
+#bnt-restart:active, #bnt-search:active{
+	background: #0787B3;
+}
+
+#bnt-restart:disabled, #bnt-search:disabled{
+	color: #444;
+	background: #CECECE;
+}
+
+/* footer designing. */
+footer {
+	text-align: center;
+	margin: 150px;
+}

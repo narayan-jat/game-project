@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/combined.css') }}">
+
+</head>
+<body>
+    <!---heading part of the web page. -->
+    <header>
+        <img id="logo" src="{{ url_for('static', filename='images/logo.png') }}">
+        <h1>WELCOME</h1>
+        <nav>
+            <ul>
+              <li><a href="/home" accesskey='a'>Home</a></li>
+              <li><a href="/signup" accesskey='b'>Signup</a></li>
+              <li><a href="/contact" accesskey='b'>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+        <main>
+            <h1>Login Here!</h1>
+            <form method="post" action='http://localhost:5000/login'>
+                <fieldset>
+                  <label for="username">Username: <input id="username" name="username" type="username" required /></label>
+                  <label for="password">Password: <input id="password" name="password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+                </fieldset>
+            <input type="submit" value="Login" class="button" />
+            </form>
+            <p><b>Don't have account ! <a href="/signup" style="text-decoration: none; color: blue;">Signup</a></b></p>
+        </main>
+        <footer>
+            <address>
+            <div><a href="https://www.instagram.com/accounts/edit/"><img src="{{ url_for('static', filename='images/facebook.png') }}" class="facebook"></a></div>
+            <div><a href="https://www.linkedin.com/in/narayan-jat-23935a255/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BisL5WNtmRDmYm6Z1X6z5Sg%3D%3D"><img src="{{ url_for('static', filename='images/linkedin.png') }}" class="linkedin"></a></div>
+            <div><a href="https://github.com/narayan-jat"><img src="{{ url_for('static', filename='images/github.png') }}" class="github"></a></div>
+            </address>
+            <p><b style="font-size: larger;">Copyright 2023@UniteCoders</b></p>
+        </footer>
+</body>
+</html>

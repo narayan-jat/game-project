@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--
+		Tic Tac Toe game
+		Author: Narayan Jat
+		Date: 14 November, 2023
+		-->
+		<meta charset="UTF-8" />
+		<meta content="Narayan Jat" name="author" />
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/game.css') }}" />
+		<script type="text/javascript" src="{{ url_for('static', filename='javascript/game.js') }}"></script>
+		<title>Tic tac toe</title>
+	</head>
+	<body>
+		<header>
+			<img id="logo" src="{{ url_for('static', filename='images/logo.png') }}">
+			<h1>WELCOME   {{ name }}</h1>
+			<nav>
+				<ul>
+				  <li><a href="/home" accesskey='a'>Home</a></li>
+				  <li><a href="/contact" accesskey='b'>Contact</a></li>
+				  {% if name %}
+				  	<li><a href="/logout" accesskey='b'>Logout</a></li>
+				{% endif %}
+				</ul>
+			</nav>
+		</header>
+		<section class="main">
+			<div class= {{class_name}}>
+				<h1>Score Board!</h1>
+				<div class="score-board">
+					<ul class="board-item">
+						<li>Total match played = {{ score[0] }}</li>
+						<li>You won = {{ score[1] }}</li>
+						<li>Total match loss with friend= {{ score[2] }}</li>
+						<li>Total match loss with computer = {{ score[3] }}</li>
+						<li>Total match draw with computer = {{ score[4] }}</li>
+						<li>Total match draw with friend = {{ score[5] }}</li>
+					</ul>
+				</div>
+			</div>
+			<div>
+				<h1>Outsmart a computer!</h1>
+				<p id="message"></p>
+				{% if name %}
+					<!-- <div id="prompt" style="display: none;">To keep track of your winnings Login <a href="/login">Here</a></div> -->
+					<p id="prompt" style="width: 0px; height: 0px; padding: 0px;"></p>
+				{% else %}
+					<div id="prompt"><a href="/login">Login</a> to track winnings or Restart the game</div>
+				{% endif %}
+				<div class="game-board">
+					<table id="tab-tic-tac-toe" cellspacing="0">
+						<tr><td id="00" onclick="clickedCell(this)"></td><td id="01" onclick="clickedCell(this)"></td><td id="02" onclick="clickedCell(this)"></td></tr>
+						<tr><td id="10" onclick="clickedCell(this)"></td><td id="11" onclick="clickedCell(this)"></td><td id="12" onclick="clickedCell(this)"></td></tr>
+						<tr><td id="20" onclick="clickedCell(this)"></td><td id="21" onclick="clickedCell(this)"></td><td id="22" onclick="clickedCell(this)"></td></tr>
+					</table>
+				</div>
+				<p>Press play computer to start first!</p>
+				<!-- change here to work with this. -->
+				<input type="button" value="Start AI" id="bnt-restart" onclick="restartBnt(this)"/>
+			</div> 
+			<div>
+				<h1>Play online with friend!</h1>
+				<input type="button" value="play with friend" id="bnt-search" onclick="playGame(this)"/>
+			</div>
+		</section>
+		<footer>
+			<p>Copyright@2023 UniteCoders</p>
+		</footer>
+	</body>
+</html>

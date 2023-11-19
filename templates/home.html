@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+    <!---heading part of the web page. -->
+    <header>
+        <img id="logo" src="{{ url_for('static', filename='images/logo.png') }}">
+        <h1>WELCOME</h1>
+        <nav>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/login">Login</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- html for hero content. -->
+        <img src="{{ url_for('static', filename='images/background.jpg') }}" alt="hero content" class="hero-image">
+        <div class="hero-text">
+            <h1>Challenge a friend or outsmart the computer</h1>
+            <p>The classic game of Tic Tac Toe awaits your tactical brilliance</p>
+            <form method="post" action='http://localhost:5000/play'>
+                <input type="submit" class="button" value="Play">
+            </form>
+        </div>
+        <!-- four images html -->
+        <div class="container">
+            <img src="{{ url_for('static', filename='images/tic1.jpg') }}" class="corner-image top-left">
+            <img src="{{ url_for('static', filename='images/tic2.png') }}" class="corner-image top-right">
+            <img src="{{ url_for('static', filename='images/tic1.png') }}" class="corner-image bottom-left">
+            <img src="{{ url_for('static', filename='images/tic3.png') }}" class="corner-image bottom-right">
+        </div>
+    </main>
+    <footer>
+        <address>
+        <div><a href="https://www.instagram.com/accounts/edit/"><img src="{{ url_for('static', filename='images/facebook.png') }}" class="facebook"></a></div>
+        <div><a href="https://www.linkedin.com/in/narayan-jat-23935a255/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BisL5WNtmRDmYm6Z1X6z5Sg%3D%3D"><img src="{{ url_for('static', filename='images/linkedin.png') }}" class="linkedin"></a></div>
+        <div><a href="https://github.com/narayan-jat"><img src="{{ url_for('static', filename='images/github.png') }}" class="github"></a></div>
+        </address>
+        <p><b style="font-size: larger;">Copyright 2023@UniteCoders</b></p>
+    </footer>
+</body>
+</html>

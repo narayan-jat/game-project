@@ -1,0 +1,146 @@
+*{
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
+    border: border-box;
+}
+/*Header alignment*/
+header {
+    width: 100%;
+    height: 50px;
+    background-color: #1b1b32;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+	margin-bottom: 500px;
+    z-index: 1;
+}
+
+#logo {
+    width: max(100px, 18vw);
+    background-color: #0a0a23;
+    aspect-ratio: 35 / 4;
+    padding: 0.4rem;
+  }
+
+  header h1 {
+    color: #f1be32;
+    font-size: min(5vw, 1.2em);
+    text-align: center;
+  }
+  
+  nav {
+    width: 50%;
+    max-width: 300px;
+    height: 50px;
+  }
+
+  nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+  }
+nav li{
+    list-style: none;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+/* styling content of main section */
+
+/* hero image styling */
+.hero-image {
+    width: 100%;
+}
+/* hero text */
+.hero-text {
+    text-align: center;
+    position: relative;
+    top: -500px;
+}
+.hero-text p, h1,input {
+    margin: 20px;
+}
+.hero-text p {
+    font-size: 1.6rem;
+    color: black;
+}
+/* input button */
+.hero-text input {
+    padding: 10px 40px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.9rem;
+    background-color: aquamarine;
+}
+/* extra image styling */
+.container {
+    position: relative;
+}
+.button {
+    border-radius: 10px;
+    box-shadow: 0 0 5px cyan;
+}
+
+/* putting images in the corners. */
+.corner-image {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+}
+
+.top-left {
+    top: -880px;
+    left: 80px;
+}
+
+.top-right {
+    top: -880px;
+    right: 80px;
+}
+
+.bottom-left {
+    bottom: 400px;
+    left: 40px;
+}
+.bottom-right {
+    bottom: 400px;
+    right: 30px;
+}
+/* styling footer of the page. */
+footer {
+    margin-top: -250px;
+    text-align: center;
+}
+address{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* stuling logos */
+.facebook , .linkedin, .github{
+    height: 60px;
+    width: 60px;
+    border-radius: 80%;
+    align-items: baseline;
+    margin: 20px;
+}
+
+.linkedin{
+    border-radius: 10%;
+    margin-top: 25px;
+}
+.github{
+    border-radius: 30%;
+}
