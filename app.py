@@ -3,12 +3,13 @@ from flask import *
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import *
 from utility import *
+import os
 
 # creating  flask application,
 app = Flask(__name__)
-
+password = os.getenv("wg_password")
 # connecting with mysql database.
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:PASSWORD@localhost/user'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql://root:{password}@localhost/user'
 app.config['SECRET_KEY'] = "e54a4a9fb8bd923330e643e31e0d7142"
 
 
