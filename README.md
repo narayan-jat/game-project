@@ -18,7 +18,7 @@ This is the web application for the game **Tic-Tac-Toe**. This is simple and use
 3. Install *MySql* Database to store the data and just mention necessary details of database in script like username, password etc.
 4. Open command prompt in the same directory where *app.py* is available and run that script. Open browser and give localhost as url and enloy the game.
 
-# Contricution
+# Contribution
 If you'd like to contribute to this project then just fork and submit the pull request with changes.
 
 # License
